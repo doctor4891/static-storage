@@ -1,0 +1,26 @@
+version: "3.7"
+services:
+  php72:
+      image: phpdockerio/php72-fpm
+      volumes:
+      - ./vkapi:/app
+      ports:
+      - 9000:9000
+      networks:
+      - vk
+  nginx:
+      build:
+          context: ./
+          dockerfile: ./nginx/Dockerfile
+      volumes:
+      - ./vkapi:/app
+      - ./nginx/etc/nginx/conf.d/vkapi.conf:/etc/nginx/conf.d/vkapi.conf
+      ports:
+      - 8081:80
+      networks:
+      - vk
+      depends_on:
+        - php72
+networks:
+  vk:
+      driver: bridge
