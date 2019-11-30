@@ -6,7 +6,7 @@ This repo based on library https://github.com/googleapis/google-cloud-php-storag
 
 Google Cloud Storage https://console.cloud.google.com
 
-Enable in google developer console "google cloud storage json api" и receive credentials.json for the service account. Store this file in /vkapi/App/credentials.json
+Enable in google developer console "google cloud storage json api" and receive credentials.json for the service account. Store this file in /vkapi/App/credentials.json
  
 Open in the google cloud storage access to files for all (https://stackoverflow.com/questions/40232188/allow-public-read-access-on-a-gcs-bucket)
 
